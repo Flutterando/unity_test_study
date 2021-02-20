@@ -1,0 +1,16 @@
+name: unity_test_study
+description: A simple command-line application.
+# version: 1.0.0
+# homepage: https://www.example.com
+
+environment:
+  sdk: '>=2.12.0-0 <3.0.0'
+
+dependencies:
+  http: ^0.13.0
+  bloc: ^7.0.0-nullsafety.2
+
+dev_dependencies:
+  test: ^1.16.0-nullsafety.15
+  pedantic: ^1.9.0
+  mocktail: ^0.0.1-dev.11
