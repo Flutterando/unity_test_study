@@ -1,5 +1,5 @@
 import 'package:mocktail/mocktail.dart';
-import 'package:test/test.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:unity_test_study/person.dart';
 import 'package:unity_test_study/person_bloc.dart';
 import 'package:unity_test_study/person_repository.dart';
@@ -13,10 +13,7 @@ void main() {
   final person = Person(id: 1, name: 'Jacob', age: 29, height: 1.77, weight: 64.4);
 
   test('deve retorna uma lista de person', () async {
-    when(repository).calls(#getPerson).thenAnswer((_) async => <Person>[
-          person,
-          person
-        ]);
+    when(repository).calls(#getPerson).thenAnswer((_) async => <Person>[person, person]);
 
     bloc.add(PersonEvent.fetch);
 
